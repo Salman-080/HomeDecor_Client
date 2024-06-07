@@ -1,10 +1,11 @@
-import { Outlet } from "react-router-dom";
-import Navbar from "../../FixedComponents/Navbar/Navbar";
+
+import Banner from "./Banner/Banner";
 import Products from "./Products/Products";
 
 const Home = () => {
     return (
         <div>
+            <Banner></Banner>
             <Products></Products>
         </div>
     );
