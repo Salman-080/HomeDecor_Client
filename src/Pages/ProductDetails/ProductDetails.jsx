@@ -4,11 +4,13 @@ import useAxiosPrivate from "../../Hooks/useAxiosPrivate";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/Provider";
 import { ToastContainer, toast } from "react-toastify";
+import useCart from "../../Hooks/useCart";
 
 const ProductDetails = () => {
     const { id } = useParams();
     console.log(id);
     const axiosPrivate = useAxiosPrivate();
+    const [,refetch]=useCart();
     const { user } = useContext(AuthContext);
 
     const { data: productInfo = [] } = useQuery({
@@ -34,6 +36,7 @@ const ProductDetails = () => {
                 progress: undefined,
                 theme: "light",
             });
+            refetch();
         }
 
 

@@ -20,7 +20,10 @@
 - Additionally, I have done the signup, login page.
 - Also additionally, I have used typewritter effect on homepage banner text paragraph.
 - Additionally, I have used react-loading skeleton.
+- I have used additional javascript library tanstack query for fetching data from server side to client side
 - User after processing cash on delivery or stripe payment option whatever the whole products order info alongside with the user's infor will be sent to the server side by hitting API and the info will be stored to the order collection. 
 - My cart page is also private route. For accessing this page user must has to logged in.
+- I have used useAxiosPublic and useAxiosPrivate for baseURL. though here they are same. but useAxiosPrivate is done for the future use of JSON web token. 
 - I have deployed fontend to the firebase and backend to the vercel.
+
 

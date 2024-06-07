@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Pages/Provider/Provider";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import useCart from "../../Hooks/useCart";
 // import useCurrentUser from "../../Hooks/useCurrentUser";
 
 const Navbar = () => {
@@ -12,6 +13,7 @@ const Navbar = () => {
     console.log(userInfo);
     const navigate = useNavigate();
     console.log(user);
+    const [cartList, refetch]=useCart();
     const axiosPublic = useAxiosPublic();
 
     const handleLogOut = () => {
@@ -50,12 +52,11 @@ const Navbar = () => {
                 console.log(err);
             })
     }
-    // const [loggedUserInfo]=useCurrentUser();
-    // console.log(loggedUserInfo);
+    
 
     const navLinks = <>
         <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/myCart">MyCart</NavLink></li>
+        <li><NavLink to="/myCart">MyCart<span className="text-red-500">+{cartList?.length}</span></NavLink></li>
 
 
         {

@@ -12,7 +12,7 @@ const Cart = () => {
     const axiosPrivate = useAxiosPrivate();
     const navigate = useNavigate();
     const [cartList, refetch] = useCart();
-    const totalPrice = cartList?.reduce((total, perProduct) => total + (perProduct.price), 0);
+    const totalPrice = cartList?.reduce((total, perProduct) => total + (perProduct.price), 0).toFixed(2);
 
 
     const handleDelete = (cartProductId) => {
