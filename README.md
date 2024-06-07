@@ -1,3 +1,6 @@
+# Home Decor Website Live Link
+https://home-decor-70922.web.app/
+
 # Setup & Run Instructions
 
 - Open the terminal
