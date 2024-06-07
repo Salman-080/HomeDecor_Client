@@ -162,7 +162,7 @@ const Register = () => {
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input name="password" type="password" placeholder="password" className="input input-bordered" required />
+                            <input name="password" type="password" placeholder="At least 6 characters" className="input input-bordered" required />
 
                         </div>
                         <p>Already Have an Account? <Link to="/login"><span className="text-blue-600">Login</span></Link></p>

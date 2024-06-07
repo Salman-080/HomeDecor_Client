@@ -19,6 +19,7 @@ import Provider from './Pages/Provider/Provider';
 import { NextUIProvider } from '@nextui-org/react';
 import Cart from './Pages/Cart/Cart';
 import Payment from './Pages/Payment/Payment';
+import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/product/:id",
-        element: <ProductDetails></ProductDetails>,
+        element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute> ,
       },
       {
         path: "/login",
@@ -43,11 +44,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/myCart",
-        element: <Cart></Cart>,
+        element: <PrivateRoute><Cart></Cart></PrivateRoute>,
       },
       {
         path: "/payment",
-        element: <Payment></Payment>,
+        element: <PrivateRoute><Payment></Payment></PrivateRoute>,
       },
     ]
   },

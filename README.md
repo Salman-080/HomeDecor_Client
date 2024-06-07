@@ -18,7 +18,9 @@
 - In cart page user can order their products. After clicking on the purchase button user will be navigated to the checkout page where user have 2 options for payment method. One is cash on delivery and the other is card payment method.
 - For card payment method I have used stripe payment method which is a secure international payment system.
 - Additionally, I have done the signup, login page.
-- Also additionally, I have used react type animation.
+- Also additionally, I have used typewritter effect on homepage banner text paragraph.
+- Additionally, I have used react-loading skeleton.
 - User after processing cash on delivery or stripe payment option whatever the whole products order info alongside with the user's infor will be sent to the server side by hitting API and the info will be stored to the order collection. 
 - My cart page is also private route. For accessing this page user must has to logged in.
+- I have deployed fontend to the firebase and backend to the vercel.
 

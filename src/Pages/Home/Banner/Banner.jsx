@@ -1,7 +1,8 @@
-import { TypeAnimation } from "react-type-animation";
 
+import Typewriter from 'typewriter-effect';
 
 const Banner = () => {
+
     return (
         <div>
             <div className="h-[200px] md:h-[500px] lg:h-[570px] bg-[#fff6ea] relative w-full">
@@ -14,15 +15,18 @@ const Banner = () => {
 
 
                     <p className="lg:text-lg md:text-base text-[10px] font-normal ">
-                        <TypeAnimation
-                            sequence={[
-                                "Discover the perfect blend of style and functionality with HomeDecor. Our curated selection of furniture, decor, and accessories will inspire you to create beautiful, inviting spaces that reflect your unique taste. Whether you're updating a single room or redesigning your entire home, HomeDecor has everything you need to bring your vision to life. Explore our collections and start transforming your space today!"
-                            ]}
-                            wrapper="span"
-                            speed={50}
 
-                            repeat={Infinity}
-
+                        <Typewriter
+                            options={{
+                                strings: [
+                                    "Discover the perfect blend of style and functionality with HomeDecor. Our curated selection of furniture, decor, and accessories will inspire you to create beautiful, inviting spaces that reflect your unique taste. Whether you're updating a single room or redesigning your entire home, HomeDecor has everything you need to bring your vision to life. Explore our collections and start transforming your space today!"
+                                ],
+                                autoStart: true,
+                                loop: true,
+                               
+                                delay: 40, 
+                                deleteSpeed: 20, 
+                            }}
                         />
                     </p>
 

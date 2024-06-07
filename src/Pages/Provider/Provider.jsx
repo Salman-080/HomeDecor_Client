@@ -66,19 +66,19 @@ const Provider = ({ children }) => {
 
   const refetchUser = useCallback(async () => {
     if (user?.email) {
-        // console.log("updated again, ");
+        
       const res = await axiosPrivate.get(`/currentUserInfo/${user.email}`);
       console.log(res.data);
       setUserInfo(res.data);
       console.log("updated not again, ");
-    //   setUser(res.data); // Update the user state with the fetched data
+    
     }
-    // console.log("object");
+  
     
   }, [axiosPrivate,user]);
 
   useEffect(() => {
-    refetchUser(); // Optionally call refetchUser on component mount
+    refetchUser(); 
   }, [refetchUser]);
 
   const authInfo = {
